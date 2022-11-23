@@ -43,11 +43,16 @@ form input {
     border-bottom: 1px solid #7041ff;
     border-left: 3px solid #7041ff;
 }
-
+form label {
+    display: block;
+    text-align: center;
+    color: red;
+}
 form .submit {
     width: 200px;
     height: 40px;
     margin: 0px auto;
+    border-radius: 5px;
     display: block;
     outline: none;
     border: none;
