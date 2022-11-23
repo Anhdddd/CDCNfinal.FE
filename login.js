@@ -1,6 +1,28 @@
 var baseURL = 'http://duongtruongvu21.ddns.net:8888/api';
 
+function isValidate()
+{
+    var username = document.getElementById("usernameIF").value;
+    var password = document.getElementById("passwordIF").value;
+    if (username == null || username == "")
+    {
+        document.getElementById('message').innerHTML = 'Vui lòng nhập tên tài khoản!'; 
+        return false;
+    }
+    else if (password == null || password == "")
+    {
+        document.getElementById('message').innerHTML = 'Vui lòng nhập mật khẩu!';
+        return false;
+    }
+    document.getElementById('message').innerHTML = '';
+    return true;
+}
+
 function Login() {
+    if (!isValidate())
+    {
+        return;
+    }
     var urlAPI = baseURL + "/Auth/Login"
     var body = {
         "username": document.getElementById("usernameIF").value,
@@ -30,6 +52,10 @@ function Login() {
 }
 
 function Register() {
+    if (!isValidate())
+    {
+        return;
+    }
     var urlAPI = baseURL + "/Auth/Register"
     var body = {
         "username": document.getElementById("usernameIF").value,
