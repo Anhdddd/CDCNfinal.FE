@@ -15,7 +15,7 @@ function handleDates(data) {
 						<div class="col-2th">
 							<div class="card">
 								<div class="image">
-									<img src="uploads/12333.png">
+									<img src="../uploads/12333.png">
 								</div>
 								<div class="name">
 									<p>${items.productName}</p>
