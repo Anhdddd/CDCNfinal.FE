@@ -1,4 +1,4 @@
-const endpoint = 'http://duongtruongvu21.ddns.net:8888/api/Product';
+const endpoint = 'https://itdut-s7.ddns.net:8082/api/Product';
 const ul = document.getElementById('containerProduct')
 
 let bankHolidays;

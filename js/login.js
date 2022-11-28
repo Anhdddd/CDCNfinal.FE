@@ -1,4 +1,4 @@
-var baseURL = 'http://duongtruongvu21.ddns.net:8888/api';
+var baseURL = 'https://itdut-s7.ddns.net:8082/api';
 
 function isValidate()
 {
