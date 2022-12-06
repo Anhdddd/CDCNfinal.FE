@@ -1,60 +1,64 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Shop điện thoại</title>
-	<link rel="stylesheet" type="text/css" href="../../css/styleListProduct.css">
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-color: #F2FBEF;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #868585;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #eee;
+        }
+
+        table tr:nth-child(even) {
+            background-color: white;
+        }
+
+        .th {
+            background-color: skyblue;
+        }
+    </style>
 </head>
+
 <body>
-	<div class="container slider-margin">
-		<div class="row">
-			<div class="col-12 title">
-				<h3>Chỉnh sửa Sản Phẩm</h3>
-			</div>
-		</div>
-		<div id="containerProduct" class="row">
-			<script src="../../js/listDeleleProduct.js"></script>
-		</div>
-	</div>
-	<footer>
-			<div class="col-12 copy_right">
-				<a href="">Team 3</a>
-			</div>
-	</footer>
+    <div>
+        <table id="containerProduct">
+            <tr>
+                <th class="th">id sản phẩm</th>
+                <th class="th">Tên sản phẩm</th>
+                <th class="th">Hình ảnh</th>
+                <th class="th">Giá</th>
+                <th class="th">Xoá</th>
+            </tr>
+            <script src="../../js/listDeleleProduct.js"></script>
+        </table>
+    </div>
 </body>
-<script>
-	var slideIndex = 1;
-	showSlides(slideIndex);
-
-	function plusSlides(n) {
-		showSlides(slideIndex += n);
-	}
-
-	function currentSlide(n) {
-		showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("dot");
-		if (n > slides.length) {
-			slideIndex = 1
-		}
-		if (n < 1) {
-			slideIndex = slides.length
-		}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex - 1].style.display = "block";
-		dots[slideIndex - 1].className += "active";
-		setTimeout(showSlides, 1000);
-	}
-</script>
 
 </html>

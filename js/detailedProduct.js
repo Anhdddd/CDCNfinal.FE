@@ -7,19 +7,6 @@ var options = {
     },
 };
 
-// function findGetParameter(parameterName) {
-//     var result = null,
-//         tmp = [];
-//     location.search
-//         .substr(1)
-//         .split("&")
-//         .forEach(function (item) {
-//           tmp = item.split("=");
-//           if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-//         });
-//     return result;
-// }
-
 var id = (location.href).split("=")[1];
 //var id = findGetParameter("idProduct");
 var urlAPI = url + "/" + id;
@@ -27,9 +14,6 @@ fetch(urlAPI, options)
     .then((response) => response.json())
     .then((data) => {
         appendData(data);
-        //alert((location.href));
-        //console.log(`Ten san pham:` + data['productName']);
-        //console.log(`Ten san pham${data.productName}`);
     });
 
 function formatMoney(n, currency) {

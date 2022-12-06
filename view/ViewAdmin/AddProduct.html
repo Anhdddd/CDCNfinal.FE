@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../js/addProduct.js"></script>
     <title>Document</title>
+    <style>
+        .size-input-text {
+            width: 300px;
+        }
+
+        .button {
+            float: left;
+            width: 150px;
+            height: 40px;
+            margin: 0px auto;
+            border-radius: 5px;
+            display: block;
+            outline: none;
+            border: none;
+            background: #6E6E6E;
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        .button:hover {
+            background: #424242;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,33 +36,28 @@
     <form action="" name="f1">
         <table>
             <tr>
-                <td>Nhập tên sản phẩm:</td>
-                <td><input type="text" name="" id="productName"></td>
+                <td><b>Nhập tên sản phẩm:</b></td>
+                <td><input class="size-input-text" type="text" name="" id="productName"></td>
             </tr>
             <tr>
-                <td>Hãng sản xuất:</td>
-                <td><input type="text" id="brand"></td>
-                <!--<td>
-                    <input name="brand" type="radio" value="Nokia" />Nokia
-                    <input name="brand" type="radio" value="Samsung" />Samsung
-                    <input name="brand" type="radio" value="Apple" />Apple
-                    <input name="brand" type="radio" value="Apple" />Vivo
-                </td>-->
+                <td><b>Hãng sản xuất:</b></td>
+                <td><input class="size-input-text" type="text" id="brand"></td>
             </tr>
             <tr>
-                <td>Mô tả:</td>
-                <td><input type="text" id="decription"></td>
+                <td><b>Mô tả:</b></td>
+                <td><input class="size-input-text" type="text" id="decription"></td>
             </tr>
             <tr>
-                <td>Link hình ảnh:</td>
-                <td><input type="text" id="imageUrl"></td>
+                <td><b>Link hình ảnh:</b></td>
+                <td><input class="size-input-text" type="text" id="imageUrl"></td>
             </tr>
             <tr>
-                <td>Giá: </td>
-                <td><input type="text" id="price"></td>
+                <td><b>Giá:</b> </td>
+                <td><input class="size-input-text" type="text" id="price"></td>
             </tr>
             <tr>
-                <td><input type="button" value="Xác nhận" onclick="ThemSP()"></td>
+                <td></td>
+                <td><input class="button" type="button" value="Xác nhận" onclick="ThemSP()"></td>
             </tr>
         </table>
     </form>

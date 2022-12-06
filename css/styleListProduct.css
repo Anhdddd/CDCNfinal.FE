@@ -19,7 +19,7 @@
 }
 
 header {
-	background-color: #FA8258;
+	background-color: skyblue;
 	padding: 10px 0 10px 0;
 }
 
@@ -87,7 +87,7 @@ p {
 ul.menu_child {
 	position: absolute;
 	width: 225px;
-	background-color: #FA8258;
+	background-color: skyblue;
 	z-index: 9999;
 
 }

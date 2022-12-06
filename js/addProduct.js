@@ -11,7 +11,7 @@ function ThemSP() {
     var body = {
         "productName": productName,
         "brandName": brandName,
-        "decription": decription,
+        "decription": decription, 
         "imageUrl": imageUrl,
         "price": price
     }
@@ -28,6 +28,6 @@ function ThemSP() {
     // gọi API
     fetch(urlAPI, options);
     alert("Đã thêm thành công!");
-    window.location = "ListUpdateProduct.html";
+    //window.location = "ListUpdateProduct.html";
     //window.location = "InitView.html"; có cái này ko thêm dc
 }

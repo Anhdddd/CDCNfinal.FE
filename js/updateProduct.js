@@ -1,23 +1,3 @@
-/*var urlAPI = 'https://itdut-s7.ddns.net:8082/api/Product/20';
-
-var body = {
-    "id": 20,
-    "productName": "SamSung Galaxy S77",
-    "brandName": "SamSung",
-    "decription": "Dynamic AMLED 2X, 6.1Inch, FHD",
-    "imageUrl": "https://cdn.tgdd.vn/Product/Images/42/231110/Galaxy-S22-Black-600*600.jpg",
-    "price": 17999876
-}
-
-var options = {
-    method: 'PUT',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body)
-};
-fetch(urlAPI, options);*/
-
 var url = 'https://itdut-s7.ddns.net:8082/api/Product';
 
 var options = {
@@ -26,7 +6,7 @@ var options = {
         'Content-Type': 'application/json',
     },
 };
-var id = (location.href).split("=")[1]; 
+var id = (location.href).split("=")[1];
 var urlAPI = url + "/" + id;
 fetch(urlAPI, options)
     .then((response) => response.json())
@@ -60,6 +40,6 @@ function ChinhSua() {
         body: JSON.stringify(body)
     };
     fetch(urlAPI, options);
-    alert("da chinh: " + id);
+    alert("Cập nhật thành công");
     window.location = "ListUpdateProduct.html";
 }
