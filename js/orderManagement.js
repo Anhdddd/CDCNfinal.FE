@@ -14,23 +14,27 @@ function formatMoney(n, currency) {
 
 function handleDates(data) {
 	bankHolidays = data;
-	const html = bankHolidays.map((items) => {
-		return `
-		<tr>
-		<td>${items.id}</td>
-		<td>${items.product.productName}</td>
-		<td>${formatMoney(items.product.price, ' đ')}</td>
-		<td>${items.customerName}</td>
-		<td>${items.customerAddress}</td>
-		<td>${items.phoneNumber}</td>
-		<td>${items.status}</td>
-		<td><button type="button" onclick="XN(${items.id})">Xác nhận</button></td>
-		<td><button type="button" onclick="HUY(${items.id})">Huỷ bỏ</button></td>
-	</tr>
-                
+	var ReverseArray = [];
+	var length = bankHolidays.length;
+	for (var i = length - 1; i >= 0; i--) {
+		ReverseArray.push(bankHolidays[i]);
+	}
+	for (var i = 0; i < length; i++) {
+		const html = `
+				<tr>
+				<td>${ReverseArray[i].id}</td>
+				<td>${ReverseArray[i].product.productName}</td>
+				<td>${formatMoney(ReverseArray[i].product.price, ' đ')}</td>
+				<td>${ReverseArray[i].customerName}</td>
+				<td>${ReverseArray[i].customerAddress}</td>
+				<td>${ReverseArray[i].phoneNumber}</td>
+				<td>${ReverseArray[i].status}</td>
+				<td><button type="button" onclick="XN(${ReverseArray[i].id})">Xác nhận</button></td>
+				<td><button type="button" onclick="HUY(${ReverseArray[i].id})">Huỷ bỏ</button></td>
+			</tr>
 						`;
-	}).join('');
-	ul.innerHTML += html;
+		ul.innerHTML += html;
+	}
 }
 
 function XN(id) {
