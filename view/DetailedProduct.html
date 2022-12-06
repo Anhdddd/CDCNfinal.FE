@@ -4,10 +4,16 @@
 <head>
 	<title>Shop điện thoại</title>
 	<link rel="stylesheet" type="text/css" href="../css/styleListProduct.css">
-	
+	<style>
+		.imgSize {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
+
 <body>
-	
+
 	<header class="sticky-top">
 		<div class="container">
 			<div class="row">
@@ -18,7 +24,7 @@
 				</div>
 				<div class="col-8 menu">
 					<ul>
-						<li><a href="">Trang chủ</a></li>
+						<li><a href="ListProduct.html">Trang chủ</a></li>
 						<li><a href="">Sản phẩm</a>
 							<ul class="menu_child">
 								<li><a href="">Iphone</a></li>
@@ -67,19 +73,37 @@
 		</div>
 		<div class="row">
 			<div class="col-12 title">
-				<h3>Danh Sách Sản Phẩm</h3>
+				<h3 id="productName"></h3>
 			</div>
 		</div>
-		<div id="containerProduct" class="row">
-			<script src="../js/listProductAPI.js"></script>
-		</div>
+
+		<script src="../js/detailedProduct.js"></script> 
+		<table border="0">
+			<tr>
+				<td style="width: 30%; height: 40%;"><img src="" alt="Hinh anh" id="imageUrl" class="imgSize"></td>
+				<td style="width: 5%;"></td>
+				<td style="float: left;">
+					<form action="" method="get">
+						<input type="hidden" name="" id="idProduct">
+						<h2 id="brandName">Hãng: </h2> <br>
+						<h4>Mô tả: </h4>
+						<p id="decription"></p>
+						<h3 id="price">Giá</h3> <br><br>
+						<a href="ViewAdmin/OrderProduct.html?" id="hrefUrl"><img style="height: 50px;" src="../uploads/GioHang.png" alt="Anh"></a>
+					</form>
+				</td>
+			</tr>
+		</table>
 	</div>
+	<br>
 	<footer>
-			<div class="col-12 copy_right">
-				<a href="">Team 3</a>
-			</div>
+		<div class="col-12 copy_right">
+			<a href="">Team 3</a>
+		</div>
 	</footer>
 </body>
+
+
 <script>
 	var slideIndex = 1;
 	showSlides(slideIndex);

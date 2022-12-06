@@ -19,7 +19,7 @@
 }
 
 header {
-	background-color: #FA8258;
+	background-color: skyblue;
 	padding: 10px 0 10px 0;
 }
 
@@ -87,7 +87,7 @@ p {
 ul.menu_child {
 	position: absolute;
 	width: 225px;
-	background-color: #FA8258;
+	background-color: skyblue;
 	z-index: 9999;
 
 }
@@ -227,15 +227,27 @@ img {
 .image img {
 	display: block;
 	width: 80%;
+	height: 150px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 5%;
+	padding-top: 10%;
 }
 
+/*.image img:hover {
+	width: 82%;
+}*/
+.card:hover img {
+	width: 83%;
+}
+.card:hover p {
+	color: blue;
+}
 .card {
 	margin-bottom: 20px;
 	background-color: #ffffff;
+	border-radius: 10px;
 }
+
 #containerProduct{
 	background-color: #f2f2f2;
 }
@@ -270,10 +282,12 @@ ul.menu_footer li {
 
 .price {
 	color: red;
-	font-weight: bold;
+	
 	text-align: center;
+	padding-bottom: 5px;
 }
 
 .name {
+	color: black;
 	text-align: center;
 }

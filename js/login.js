@@ -45,7 +45,7 @@ function Login() {
             console.log(json) // api xử lí xong phản hồi thì hiển thị ra
             if (json['IsSuccess']) {
                 alert("Đăng nhập thành công!!");
-                window.location = "ListProduct.html";
+                window.location = "../view/ViewAdmin/AdminHomePage.html";
             } else {
                 alert("Đăng nhập thất bại!!\nDo " + json['Data'][0]);
             }

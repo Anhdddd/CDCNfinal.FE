@@ -17,7 +17,7 @@ function handleDates(data) {
 	const html = bankHolidays.map((items) => {
 		return `
 						<div class="col-2th">
-						<a href="../view/DetailedProduct.html?idChiTiet=${items.id}">
+						<a href="">
 							<div class="card">
 								<div class="image">
 									<img src="${items.imageUrl}">

@@ -16,23 +16,15 @@ function handleDates(data) {
 	bankHolidays = data;
 	const html = bankHolidays.map((items) => {
 		return `
-						<div class="col-2th">
-						<a href="../view/DetailedProduct.html?idChiTiet=${items.id}">
-							<div class="card">
-								<div class="image">
-									<img src="${items.imageUrl}">
-								</div>
-								<div class="name">
-									<p>${items.productName}</p>
-								</div>
-								<div class="price">
-									<p>${formatMoney(items.price, ' đ')}</p>
-								</div>
-							</div>
-						</a>
-						</div>
+		<tr>
+		<td>${items.id}</td>
+		<td>${items.productName}</td>
+		<td><img style="width:70px;" src="${items.imageUrl}"</td>
+		<td>${formatMoney(items.price, ' đ')}</td>
+		<td><a href="UpdateProduct.html?idUpdate=${items.id}">xxx</a></td>
+	</tr>
                 
 						`;
 	}).join('');
-	ul.innerHTML = html;
+	ul.innerHTML += html;
 }

@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/addProduct.js"></script>
+    <title>Document</title>
+    <style>
+        .size-input-text {
+            width: 300px;
+        }
+
+        .button {
+            float: left;
+            width: 150px;
+            height: 40px;
+            margin: 0px auto;
+            border-radius: 5px;
+            display: block;
+            outline: none;
+            border: none;
+            background: #6E6E6E;
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        .button:hover {
+            background: #424242;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Thêm sản phẩm</h3>
+    <form action="" name="f1">
+        <table>
+            <tr>
+                <td><b>Nhập tên sản phẩm:</b></td>
+                <td><input class="size-input-text" type="text" name="" id="productName"></td>
+            </tr>
+            <tr>
+                <td><b>Hãng sản xuất:</b></td>
+                <td><input class="size-input-text" type="text" id="brand"></td>
+            </tr>
+            <tr>
+                <td><b>Mô tả:</b></td>
+                <td><input class="size-input-text" type="text" id="decription"></td>
+            </tr>
+            <tr>
+                <td><b>Link hình ảnh:</b></td>
+                <td><input class="size-input-text" type="text" id="imageUrl"></td>
+            </tr>
+            <tr>
+                <td><b>Giá:</b> </td>
+                <td><input class="size-input-text" type="text" id="price"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class="button" type="button" value="Xác nhận" onclick="ThemSP()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

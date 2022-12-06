@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==Reset CSS==*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .row {
+            display: flex;
+            max-width: 100%;
+            flex-wrap: wrap;
+            background-color: skyblue;
+            padding: 10px 0 20px 0;
+        }
+        .row img {
+            padding-left: 3%;
+        }
+
+        /*==Style cơ bản cho website==*/
+        body {
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        /*==Style cho menu===*/
+        #menu ul {
+            background: skyblue;
+            list-style-type: none;
+            text-align: left;
+        }
+
+        #menu li {
+            color: #f1f1f1;
+            display: inline-block;
+            width: 170px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+        }
+
+        #menu a:hover {
+            background: #F1F1F1;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <img src="../../uploads/logo.png">
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="InitView.html" target="adminPage">Trang chủ</a></li>
+            <li><a href="AddProduct.html" target="adminPage">Thêm sản phẩm</a></li>
+            <li><a href="ListUpdateProduct.html" target="adminPage">Cập nhật sản phẩm</a></li>
+            <li><a href="ListDeleteProduct.html" target="adminPage">Xoá sản phẩm</a></li>
+            <li><a href="OrderManagement.html" target="adminPage">Quản lý Order</a></li>
+            <li><a href="../ListProduct.html" target="_top">Đăng xuất</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
